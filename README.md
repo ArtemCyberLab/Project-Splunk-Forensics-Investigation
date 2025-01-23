@@ -1,0 +1,7 @@
+I created this project to understand how to use Splunk for investigating security incidents. It was my first experience working with this tool, but it turned out to be quite intuitive and user-friendly. The goal was to investigate an attack on a server, find traces of the attackers' actions, and understand how they exploited the vulnerability. In the process, I learned how to search for relevant data in logs, filter results, and identify suspicious activity.
+
+I started by looking for a backdoor user that the attackers might have added. To do this, I searched the logs for information about new user creations and excluded standard users like root. This helped me identify a suspicious user added after the attack. Next, I checked the Linux package installation logs located in /var/log/dpkg.log to figure out what the attackers had installed. By comparing timestamps, I found a malicious package that clearly stood out.
+
+The final step was analyzing TeamCity logs to find a malicious plugin uploaded after the successful exploitation. I searched for entries related to uploaded plugins and managed to identify the one used by the attackers.
+
+This project helped me gain a better understanding of how to conduct forensic investigations using Splunk. I enjoyed working with logs and uncovering the clues hidden in them. I plan to continue developing in this area because it’s such an exciting field!
